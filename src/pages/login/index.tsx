@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 
-import {Cadastro} from '../cadastro'
+// import {Cadastro} from '../cadastro'
 
 import { Button } from "../../components/Button";
 import { Header } from "../../components/Header";

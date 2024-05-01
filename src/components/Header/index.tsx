@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import React from "react";
-import {Home} from '../../pages/home'
+// import {Home} from '../../pages/home'
 import logo from '../../assets/logo_DIO.png'
 import {Button} from "../Button";
 import {
@@ -18,6 +18,9 @@ import {IHeader} from './types';
 
 const Header=({autenticado}: IHeader) => {
     const navigate = useNavigate();
+    const handleClickHome = () => {
+        navigate('/')
+    }
     const handleClickSignIn = () => {
         navigate('/login')
     }
@@ -41,7 +44,10 @@ const Header=({autenticado}: IHeader) => {
                 </Row>
                 <Row>
                     {autenticado ? (
-                        <UserPicture src="https://avatars.githubusercontent.com/u/76171709?v=4" />
+                        <>
+                            <UserPicture src="https://avatars.githubusercontent.com/u/76171709?v=4" />
+                            <Button title="Sair" onClick={handleClickHome}/>
+                        </>
                     ) : (
                         <>
                             <MenuRight href="Home">Home</MenuRight>

@@ -1,5 +1,6 @@
 {
   "name": "dio",
+  "homepage": "http://giuanm.github.io/Tela_cadastro-DIO",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -24,7 +25,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "api": "json-server --watch db.json -p 8001"
+    "api": "json-server --watch db.json -p 8001",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist" 
   },
   "eslintConfig": {
     "extends": [

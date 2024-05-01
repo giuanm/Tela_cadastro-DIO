@@ -5,11 +5,15 @@ export const ButtonContainer = styled.button<IButtonStyled>`
     background: #565656;
     border-radius: 22px;
     position: relative;
+    margin: auto 8px;
 
     color: #fff;
     padding: 2px 12px;
     min-width: 120px;
     width:100%;
+    &:hover{
+        cursor: pointer;
+    }
 
 
     ${({variant}) => variant !== "primary" && css`
